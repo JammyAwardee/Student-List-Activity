@@ -13,7 +13,7 @@
 
    <section class="mt-10">
 
-      <form action="/student/{{$student->id}}" method="POST" class="flex flex-col">
+      <form action="/student/{{ $student->id }}" method="POST" class="flex flex-col">
          
          @method('PUT')
          @csrf
@@ -68,13 +68,13 @@
             @enderror
          </div>
 
-         <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Update</button>
+         <button type="submit" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Update</button>
          
          </form>
          <form action="" method="POST">
             @method('delete')
             @csrf
-            <button type="submit" class="w-full mt-2 bg-red-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Delete</button>
+            <button type="submit" class="w-full mt-2 bg-orange-400 hover:bg-red-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Delete</button>
          </form>
    </section>
 </main>

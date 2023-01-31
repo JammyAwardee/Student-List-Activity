@@ -1,13 +1,16 @@
 @include('partials.header')
+<?php $array = array('title' => 'Student System') ;?>
+<x-nav :data="$array"/>
+
    <header class="max-w-lg mx-auto">
       <a href="#">
-         <h1 class="text-4xl font-bold text-white text-center"> Student Registration</h1>
+         <h1 class="text-4xl font-bold text-white text-center mt-10"> Student Registration</h1>
       </a>
    </header>
    <main class="bg-white max-w-lg mx-auto p-8 my-10 rounded-lg shadow-2xl">
       <section>
          <h3 class="font-bold text-2xl text-center">Welcome to Student System</h3>
-             <p class="text-gray-600 pt-2">Sign in to your account <a href="/login" class="text-purple-300 font-bold">here</a> </p>           
+             <p class="text-gray-600 pt-2">Sign in to your account <a href="/login" class="text-gray-400 font-bold">here</a> </p>           
       </section>
 
       <section class="mt-10">
@@ -50,7 +53,7 @@
                </p>
             @enderror
             </div>
-            <button class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
+            <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
          </form>
       </section>
    </main>

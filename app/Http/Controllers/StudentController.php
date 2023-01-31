@@ -15,7 +15,7 @@ class StudentController extends Controller
     public function index() 
     {
         
-        $data = array("students" => DB::table('students')->orderBy('created_at', 'desc')->simplePaginate(10));
+        $data = array("students" => DB::table('students')->orderBy('created_at', 'desc')->simplePaginate(12));
         
         return view('students.index', $data);
     }
