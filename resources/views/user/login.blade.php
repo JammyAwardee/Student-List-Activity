@@ -29,7 +29,7 @@
                <label for="password" class="block text-gray-700 text-sm font-bold mb-2 ml-3">Password</label>
                <input type="password" name="password" class="bg-gray-200 rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-400 px-3">
             </div>
-            <button type="submit" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Login</button>
+            <button type="submit" class="bg-gray-600 hover:bg-gray-400 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Login</button>
          </form>
       </section>
    </main>

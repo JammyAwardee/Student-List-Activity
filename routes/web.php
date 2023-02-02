@@ -54,11 +54,12 @@ Route::controller(UserController::class)->group(function(){
 
 Route::controller(StudentController::class)->group(function(){
    Route::get('/', 'index')->middleware('auth');
-   Route::get('/add/student', 'create')->name('add student'); //Addstudent
-   Route::post('/add/student', 'store');
-   Route::get('/student/{id}', 'show');
-   Route::put('/student/{student}', 'update');
-   Route::delete('/student/{student}', 'destroy');
+   Route::get('/add/student', 'create')->name('add student')->middleware('auth'); //Addstudent
+   Route::post('/add/student', 'store')->middleware('auth');
+   Route::get('/student/{id}', 'show')->middleware('auth');
+   Route::put('/student/{student}', 'update')->middleware('auth');
+   Route::delete('/student/{student}', 'destroy')->middleware('auth');
+   Route::post('/search', 'search');
 });
 
 

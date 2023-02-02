@@ -53,7 +53,7 @@
                </p>
             @enderror
             </div>
-            <button class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
+            <button class="bg-gray-600 hover:bg-gray-400 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Sign up</button>
          </form>
       </section>
    </main>

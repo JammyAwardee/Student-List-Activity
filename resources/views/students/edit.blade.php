@@ -68,7 +68,7 @@
             @enderror
          </div>
 
-         <button type="submit" class="bg-gray-800 hover:bg-gray-600 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Update</button>
+         <button type="submit" class="bg-gray-600 hover:bg-gray-400 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transitionduration-200" type="submit">Update</button>
          
          </form>
          <form action="" method="POST">

@@ -46,7 +46,7 @@ class StudentController extends Controller
     public function update(Request $request, Students $student) {
         // dd($request);
         $validated = $request->validate([
-            "first_name" => ['required', 'min:2'],
+            "first_name" => ['required', 'min:2'], 
             "last_name" => ['required', 'min:2'],
             "gender" => ['required'],
             "age" => ['required'],
@@ -55,7 +55,7 @@ class StudentController extends Controller
 
        $student->update($validated);
 
-       return back()->with('message', 'Data was successfully updated');
+       return redirect('/')->with('message', 'Data was successfully updated');
     }
 
     public function destroy(Students $student) {
@@ -63,4 +63,18 @@ class StudentController extends Controller
         return redirect('/')->with('message','Data was successfully deleted');
     }
 
+    public function search(Request $request) {
+        $q = ($request->input('q'));
+	if($q != ''){
+		$data =Students::where('first_name','like','%'.$q.'%')->orWhere('last_name','like','%'.$q.'%')->orWhere('email','like','%'.$q.'%')->orWhere('gender','like',$q.'%')->orWhere('age','like','%'.$q.'%')->paginate(12)->setpath('');
+		$data->appends(array(
+           'q' => $request->input('q'),
+		));
+		if(count($data)>0){
+                return view('students.index', ['students' => $data]);
+		}
+		return redirect('/')->with('message', 'No results found!');
+	}
+    return redirect('/')->with('message', 'Please search by first name, last name or email');
+    }
   }
